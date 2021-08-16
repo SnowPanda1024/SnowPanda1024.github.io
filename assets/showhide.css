@@ -1,0 +1,26 @@
+.hidden {
+    display: none;
+    background-color: #e6e6e6;
+    border-radius: 14.5px;
+    padding: 6px 10px 4px 20px;
+    margin: 12px;
+  }
+
+.hide-heading {
+    text-decoration: none;
+    color: #e06800;
+    background-color: #f9e1cc;
+    border-radius: 2px;
+}
+
+.hide-heading:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #e06800;
+}
+/*
+.wrap-hidden {
+  padding: 5px;
+  margin: 5px;
+}
+*/
