@@ -2,7 +2,7 @@
     Latex styles derived from https://github.com/vincentdoerig/latex-css/blob/master/style.css
 */
 /* Theorem */
-.theorem, .lemma, .definition, .claim, .example {
+.theorem, .lemma, .definition, .claim, .example, .problem {
     margin: 12px 0;
     padding: 5px 5px 5px 10px;
     display: block;
@@ -25,7 +25,7 @@
 /* Lemma */
 .lemma {
     counter-increment: theorem;
-    font-style: italic;
+    font-style: normal;
     background-color: aliceblue;
     border-left-style: solid;
     border-left-color: blue;
@@ -42,10 +42,10 @@
 /* Claim */
 .claim {
     counter-increment: theorem;
-    font-style: italic;
-    background-color: honeydew;
+    font-style: normal;
+    background-color: rgb(230, 240, 220);
     border-left-style: solid;
-    border-left-color: olive;
+    border-left-color: darkgreen;
 }
 .claim::before {
     content: 'Claim ' counter(theorem) '. ';
@@ -59,10 +59,10 @@
 /* Example */
 .example {
     counter-increment: theorem;
-    font-style: italic;
-    background-color: floralwhite;
+    font-style: normal;
+    background-color: mistyrose;
     border-left-style: solid;
-    border-left-color: coral;
+    border-left-color: darkred;
 }
 .example::before {
     content: 'Example ' counter(theorem) '. ';
@@ -71,6 +71,22 @@
 }
 .example[text]:before {
     content: 'Example ' counter(theorem) ' (' attr(text) ") ";
+}  
+
+.problem {
+    counter-increment: theorem;
+    font-style: normal;
+    background-color: mistyrose;
+    border-left-style: solid;
+    border-left-color: darkred;
+}
+.problem::before {
+    content: 'Problem ' counter(theorem) '. ';
+    font-weight: bold;
+    font-style: normal;
+}
+.problem[text]:before {
+    content: 'Problem ' counter(theorem) ' (' attr(text) ") ";
 }  
 
 /* Proof */

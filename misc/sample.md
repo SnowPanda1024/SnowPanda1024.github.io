@@ -67,14 +67,14 @@ For text environments for math, we use HTML and CSS. Essentialy, we use an HTML 
 E.g.
 ```md
 <div class='theorem' text='Fermats Little Theorem'>
-if $p$ is a prime number, then for any integer $a$, the number $a^p − a$ is 
+If $p$ is a prime number, then for any integer $a$, the number $a^p − a$ is 
 an integer multiple of $p$. In the notation of modular arithmetic, 
 this is expressed as
 \[a^{p}\equiv a{\pmod {p}}.\]
 </div>
 ```
 <div class='theorem' text='Fermats Little Theorem'>
-if $p$ is a prime number, then for any integer $a$, the number $a^p − a$ is an integer multiple of $p$. In the notation of modular arithmetic, this is expressed as
+If $p$ is a prime number, then for any integer $a$, the number $a^p − a$ is an integer multiple of $p$. In the notation of modular arithmetic, this is expressed as
 \[a^{p}\equiv a{\pmod {p}}.\]
 </div>
 
@@ -134,6 +134,27 @@ Here is an example of <span class='hidden' desc='hidden inline'>$a^2 + b^2 =5$</
 continuation follows.
 ```
 Here is an example of <span class='hidden' desc='hidden inline'>$a^2 + b^2 =5$</span> text. continuation follows.
+
+This is a test of how to include a problem solution. 
+
+<div class='problem' text='IMO 2021/5'>
+Two squirrels, Bushy and Jumpy, have collected 2021 walnuts for the winter. Jumpy numbers the walnuts from 1 through 2021, and digs 2021 little holes in a circular pattern in the ground around their favourite tree. The next morning Jumpy notices that Bushy had placed one walnut into each hole, but had paid no attention to the numbering. Unhappy, Jumpy decides to reorder the walnuts by performing a sequence of 2021 moves. In the $k$-th move, Jumpy swaps the positions of the two walnuts adjacent to walnut $k$.
+
+Prove that there exists a value of $k$ such that, on the $k$-th move, Jumpy swaps some walnuts $a$ and $b$ such that $a < k < b$.
+</div>
+
+<div class='hidden' desc='Solution'>
+This is where to input a solution. 
+
+<div class='claim'>
+It is possible to use claims inside hidden text.
+</div>
+
+<div class='proof'>
+See the above text. 
+</div>
+</div>
+
 ### Code Blocks
 
 #### Asy
