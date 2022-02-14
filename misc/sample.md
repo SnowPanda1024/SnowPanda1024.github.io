@@ -146,13 +146,17 @@ Prove that there exists a value of $k$ such that, on the $k$-th move, Jumpy swap
 <div class='hidden' desc='Solution'>
 This is where to input a solution. 
 
-<div class='claim'>
+<div class='claim-un'>
 It is possible to use claims inside hidden text.
 </div>
 
 <div class='proof'>
 See the above text. 
 </div>
+</div>
+
+<div class='remark'>
+Unnumbered claims also exist. 
 </div>
 
 ### Code Blocks
