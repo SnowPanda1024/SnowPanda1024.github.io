@@ -77,7 +77,7 @@ But what if we *can't* choose a large enough prime &mdash; what if all primes wh
 
 In fact, the following more general statement is true:
 
-<div class='example' text='ISL 2009 N3'>
+<div class='problem' text='ISL 2009 N3'>
 	Let $f : \mathbb{N} \to \mathbb{Z}$ be a nonconstant function, such that $a - b \mid f(a) - f(b)$ for all positive integers $a$ and $b$. Prove that there are infinitely many primes $p$ such that $p$ divides $f(c)$ for some positive integer $c$. 
 </div>
 
