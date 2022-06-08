@@ -39,6 +39,24 @@
     content: 'Lemma ' counter(theorem) ' (' attr(text) "). ";
 }  
 
+/* Proposition */
+
+.proposition {
+    counter-increment: theorem;
+    font-style: normal;
+    background-color: rgb(225, 234, 236);
+    border-left-style: solid;
+    border-left-color: darkblue;
+}
+.proposition::before {
+    content: 'Proposition ' counter(theorem) '. ';
+    font-weight: bold;
+    font-style: normal;
+}
+.proposition[text]:before {
+    content: 'Proposition ' counter(theorem) ' (' attr(text) "). ";
+}  
+
 /* Claim */
 .claim {
     counter-increment: theorem;
@@ -72,6 +90,23 @@
     content: 'Claim (' attr(text) "). ";
 }  
 
+/* Fact */
+.fact {
+    counter-increment: theorem;
+    font-style: normal;
+    background-color: rgb(225, 234, 236);
+    border-left-style: solid;
+    border-left-color: darkblue;
+}
+.fact::before {
+    content: 'Fact ' counter(theorem) '. ';
+    font-weight: bold;
+    font-style: normal;
+}
+.fact[text]:before {
+    content: 'Fact ' counter(theorem) ' (' attr(text) "). ";
+}  
+
 /* Example */
 .example {
     counter-increment: theorem;
@@ -89,6 +124,24 @@
     content: 'Example ' counter(theorem) ' (' attr(text) "). ";
 }  
 
+/* Question */
+.question {
+    counter-increment: theorem;
+    font-style: normal;
+    background-color: rgb(235, 243, 225);
+    border-left-style: solid;
+    border-left-color: darkgreen;
+}
+.question::before {
+    content: 'Question ' counter(theorem) '. ';
+    font-weight: bold;
+    font-style: normal;
+}
+.question[text]:before {
+    content: 'Question ' counter(theorem) ' (' attr(text) "). ";
+}  
+
+/* Problem */
 .problem {
     counter-increment: theorem;
     font-style: normal;
@@ -146,18 +199,18 @@
   
 /* Definition */
 .definition {
-    counter-increment: definition;
+    counter-increment: theorem;
     font-style: normal;
     background-color: rgb(230, 231, 233);
     border-left-style: solid;
     border-left-color: darkslategray;
 }
 .definition::before {
-    content: 'Definition ' counter(definition) '. ';
+    content: 'Definition ' counter(theorem) '. ';
     font-weight: bold;
     font-style: normal;
 }
 .definition[text]:before {
-    content: 'Definition ' counter(definition) ' (' attr(text) "). ";
+    content: 'Definition ' counter(theorem) ' (' attr(text) "). ";
 }
   
