@@ -112,7 +112,7 @@ Before we see the proof, we'll first look at a specific example:
 </div>
 
 <div class='proof'>
-	Let $n = n_1 + pt$, for some integer $t$. Then we have \[n^2 + 2 = n_1^2 + 2pt + p^2t^2 + 2 \equiv n_1^2 + 2 + 2pn_1t \pmod{p^2}.\] We know $n_1^2 + 2$ is some multiple of $p$, and since $p \nmid 2n_1$, then $2pn_1t$ must run over all possible multiples of $p$. So as $t$ varies, $n^2 + 2$ must cover all multiples of $p$ mod $p^2$. 
+	Let $n = n_1 + pt$, for some integer $t$. Then we have \[n^2 + 2 = n_1^2 + 2pn_1t + p^2t^2 + 2 \equiv n_1^2 + 2 + 2pn_1t \pmod{p^2}.\] We know $n_1^2 + 2$ is some multiple of $p$, and since $p \nmid 2n_1$, then $2pn_1t$ must run over all possible multiples of $p$. So as $t$ varies, $n^2 + 2$ must cover all multiples of $p$ mod $p^2$. 
 </div>
 
 The proof in the general case is essentially the same:
@@ -120,7 +120,7 @@ The proof in the general case is essentially the same:
 <div class='proof' text='Proof of Hensel&apos;s Lemma'>
 	Induct on $e$ &mdash; in the base case $e = 1$, there is nothing to prove. Now choose $n_{e - 1} \equiv n_1 \pmod{p}$ such that $P(n_{e - 1}) \equiv c \pmod{p^{e - 1}}$, using the inductive hypothesis. Now let $n_e = n_{e - 1} + p^{e - 1}t$ for any integer $t$. 
 	<br/><br/>
-	Let $P(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0$. Then we have \[(n_{e - 1} + p^{e - 1}t)^i \equiv n_{e - 1}^i + ip^{e - 1}tn_{e - 1}^{i - 1}\] by the Binomial Theorem (every other term is divisible by $p^e$, since $2(e - 1) \geq e$). So this means \[P(n_e) \equiv P(n_{e - 1}) + p^{e - 1}\cdot P'(n_{e - 1})t.\] Since $P'(n_{e - 1})$ is not divisible by $p$, then the second term must cover all multiples of $p^{e - 1}$ mod $p^e$, which means over all values of $t$, we must be able to get $P(n_e) \equiv c \pmod{p^e}$. 
+	Let $P(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_1x + a_0$. Then we have \[(n_{e - 1} + p^{e - 1}t)^i \equiv n_{e - 1}^i + ip^{e - 1}tn_{e - 1}^{i - 1} \pmod{p^e}\] by the Binomial Theorem (every other term is divisible by $p^e$, since $2(e - 1) \geq e$). So this means \[P(n_e) \equiv P(n_{e - 1}) + p^{e - 1}\cdot P'(n_{e - 1})t \pmod{p^e}.\] Since $P'(n_{e - 1})$ is not divisible by $p$, then the second term must cover all multiples of $p^{e - 1}$ mod $p^e$, which means over all values of $t$, we must be able to get $P(n_e) \equiv c \pmod{p^e}$. 
 </div>
 
 Now in our case, we know $Q_i$ and $Q_i'$ are relatively prime, as polynomials (since the $Q_i$ are irreducible), so their gcds are again bounded. So as long as we chose our primes $p_i$ to be large enough, we know that if $p_i \mid Q_i(n_i)$, then $p_i \nmid Q_i'(n_i)$. So we can actually choose $n_i$ mod $p_i^2$ such that $Q_i(n_i) \equiv p_i \pmod{p_i^2}$. 
